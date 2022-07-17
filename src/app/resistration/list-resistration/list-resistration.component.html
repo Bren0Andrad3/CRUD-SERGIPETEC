@@ -1,0 +1,46 @@
+
+<table class="table table-striped table-bordered table-hover">
+<tbody>
+    <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>CPF</th>
+            <th>Celular</th>
+            <th>Telefone</th>
+            <th>Endereço</th>
+            <th class="text-center">
+                <a href="#" title="Novo" alt = "Novo"
+                [routerLink]="['/resistration/novo']"
+                class="btn btn-xs btn-success">
+                <i class="fa fa-plus" aria-hidden="true"></i> Novo
+                </a>
+            </th>
+
+</tr>
+    <tr *ngFor="let resistration of resistrations">
+            <td>{{resistration.name}}</td>
+            <td>{{resistration.email}}</td>
+            <td>{{resistration.cpf}}</td>
+            <td>{{resistration.cellphone}}</td>
+            <td>{{resistration.telephone}}</td>
+            <td>{{resistration.address}}</td>
+           
+            <td class="text-center" style="width: 300px">
+                <a href="#" title="Editar" alt = "Editar"
+                [routerLink]="['/resistration/editar', resistration.id]"
+                class="btn btn-xs btn-info">
+                <i class="fa fa-edit" aria-hidden="true"></i> Editar
+                </a>
+                <a href="#" title="Remover" alt="Remover" class="btn btn-xs btn-danger"
+                (click)="remove($event, resistration)">
+                    <i class="fa fa-times" aria-hidden="true"></i> Remover
+                </a>
+            </td>
+
+</tr>
+
+
+</tbody>
+
+</table>
+<p *ngIf="resistrations.length==0">Nehuma Pessoa Cadastrada</p>
