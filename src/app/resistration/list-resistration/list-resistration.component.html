@@ -8,6 +8,7 @@
             <th>Celular</th>
             <th>Telefone</th>
             <th>Endereço</th>
+            <th>Segundo endereço</th>
             <th class="text-center">
                 <a href="#" title="Novo" alt = "Novo"
                 [routerLink]="['/resistration/novo']"
@@ -23,7 +24,10 @@
             <td>{{resistration.cpf}}</td>
             <td>{{resistration.cellphone}}</td>
             <td>{{resistration.telephone}}</td>
-            <td>{{resistration.address}}</td>
+            <td>{{resistration.address.rua +" -- "+ resistration.address.numero +" -- "+ resistration.address.bairro
+                +" -- "+resistration.address.cidade +" -- "+ resistration.address.cep}}</td>
+            <td>{{resistration.address2.rua +" -- "+ resistration.address2.numero +" -- "+ resistration.address2.bairro
+                +" -- "+resistration.address2.cidade +" -- "+ resistration.address2.cep}}</td>
            
             <td class="text-center" style="width: 300px">
                 <a href="#" title="Editar" alt = "Editar"

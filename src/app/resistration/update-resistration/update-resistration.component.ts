@@ -12,6 +12,7 @@ import { ResistrationService } from '../services/resistration.service';
 export class UpdateResistrationComponent implements OnInit {
   @ViewChild ('formResistration') formResistration! : NgForm;
   resistration! : Resistration;
+  generate: boolean = false
 
   constructor(
     private resistrationService: ResistrationService,
@@ -35,5 +36,10 @@ export class UpdateResistrationComponent implements OnInit {
       this.router.navigate(['resistration']);
     }
   }
+  generateInput(){
+    this.generate = true
+  }
 
 }
+
+
