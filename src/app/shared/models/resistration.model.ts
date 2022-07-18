@@ -1,13 +1,13 @@
 export class Resistration {
-    
+
 
     public id?: number;
-        public name?: string;
-        public email?: string;
-        public cpf?: string;
-        public cellphone?: string;
-        public telephone?: string;
-        public address: 
+    public name?: string;
+    public email?: string;
+    public cpf?: string;
+    public cellphone?: string;
+    public telephone?: string;
+    public address:
         {
             rua: string,
             numero: string,
@@ -18,7 +18,7 @@ export class Resistration {
             pais: string,
         };
 
-        public address2: 
+    public address2:
         {
             rua: string,
             numero: string,
@@ -29,26 +29,26 @@ export class Resistration {
             pais: string,
         }
 
-    constructor(){
-       this.address={
-        rua: "",
-        numero: "",
-        bairro: "",
-        cidade: "",
-        cep: "",
-        estado: "",
-        pais: ""
-       } 
+    constructor() {
+        this.address = {
+            rua: "",
+            numero: "",
+            bairro: "",
+            cidade: "",
+            cep: "",
+            estado: "",
+            pais: ""
+        }
 
-       this.address2={
-        rua: "",
-        numero: "",
-        bairro: "",
-        cidade: "",
-        cep: "",
-        estado: "",
-        pais: ""
-       }
+        this.address2 = {
+            rua: "",
+            numero: "",
+            bairro: "",
+            cidade: "",
+            cep: "",
+            estado: "",
+            pais: ""
+        }
     }
 }
 

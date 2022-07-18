@@ -12,29 +12,29 @@ export class ResistrationService {
   constructor() { }
 
 
-  GetAll(): Resistration[]{
+  GetAll(): Resistration[] {
     const resistrations = localStorage[LS_CHAVE]
-    return resistrations? JSON.parse(resistrations):[]
+    return resistrations ? JSON.parse(resistrations) : []
   }
 
-  insert(resistration:Resistration):void{
+  insert(resistration: Resistration): void {
     const resistrations = this.GetAll();
     resistration.id = new Date().getTime();
     resistrations.push(resistration)
     localStorage[LS_CHAVE] = JSON.stringify(resistrations);
   }
 
-  GetById(id: number): Resistration | undefined{
+  GetById(id: number): Resistration | undefined {
     const resistrations: Resistration[] = this.GetAll()
     return resistrations.find(resistration => resistration.id === id)
   }
 
-  update(resistration: Resistration):void{
+  update(resistration: Resistration): void {
     const resistrations: Resistration[] = this.GetAll()
 
     resistrations.forEach(
-      (obj, index, objs)=>{
-        if(resistration.id === obj.id){
+      (obj, index, objs) => {
+        if (resistration.id === obj.id) {
           objs[index] = resistration
         }
       }
@@ -44,7 +44,7 @@ export class ResistrationService {
 
   }
 
-  remove(id:number):void{
+  remove(id: number): void {
     let resistrations: Resistration[] = this.GetAll();
     resistrations = resistrations.filter(resistration => resistration.id !== id);
     localStorage[LS_CHAVE] = JSON.stringify(resistrations)

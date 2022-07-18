@@ -7,21 +7,30 @@ import { Resistration } from './shared/models/resistration.model';
 
 const routes: Routes = [
   {
-  path:'',
-  redirectTo: 'resistration/list',
-  pathMatch: "full"},
+    path: '',
+    redirectTo: 'resistration/list',
+    pathMatch: "full"
+  },
 
-  {path:'resistration',
-  redirectTo: 'resistration/list'},
+  {
+    path: 'resistration',
+    redirectTo: 'resistration/list'
+  },
 
-  {path:'resistration/list',
-  component: ListResistrationComponent},
+  {
+    path: 'resistration/list',
+    component: ListResistrationComponent
+  },
 
-  {path:'resistration/novo',
-  component: InsertResistrationComponent},
+  {
+    path: 'resistration/novo',
+    component: InsertResistrationComponent
+  },
 
-  {path:'resistration/editar/:id',
-  component: UpdateResistrationComponent}
+  {
+    path: 'resistration/editar/:id',
+    component: UpdateResistrationComponent
+  }
 ];
 
 @NgModule({

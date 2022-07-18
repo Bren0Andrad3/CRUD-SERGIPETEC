@@ -10,28 +10,28 @@ import { ResistrationService } from '../services/resistration.service';
   styleUrls: ['./insert-resistration.component.css']
 })
 export class InsertResistrationComponent implements OnInit {
-  @ViewChild ('formResistration') formResistration! : NgForm;
-  resistration! : Resistration
+  @ViewChild('formResistration') formResistration!: NgForm;
+  resistration!: Resistration
   generate: boolean = false
-  
+
   constructor(
     private resistrationService: ResistrationService,
     private router: Router
   ) { }
-   
+
   ngOnInit(): void {
     this.resistration = new Resistration();
-    
+
   }
 
-  insert(): void{
-    if(this.formResistration.form.valid){
-        this.resistrationService.insert(this.resistration)
-        this.router.navigate(["/resistration/"])
+  insert(): void {
+    if (this.formResistration.form.valid) {
+      this.resistrationService.insert(this.resistration)
+      this.router.navigate(["/resistration/"])
     }
   }
 
-  generateInput(){
+  generateInput() {
     this.generate = true
   }
 

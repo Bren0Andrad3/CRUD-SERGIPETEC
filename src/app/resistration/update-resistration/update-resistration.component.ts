@@ -10,8 +10,8 @@ import { ResistrationService } from '../services/resistration.service';
   styleUrls: ['./update-resistration.component.css']
 })
 export class UpdateResistrationComponent implements OnInit {
-  @ViewChild ('formResistration') formResistration! : NgForm;
-  resistration! : Resistration;
+  @ViewChild('formResistration') formResistration!: NgForm;
+  resistration!: Resistration;
   generate: boolean = false
 
   constructor(
@@ -23,20 +23,20 @@ export class UpdateResistrationComponent implements OnInit {
   ngOnInit(): void {
     let id = +this.route.snapshot.params['id']
     const res = this.resistrationService.GetById(id);
-    if(res!== undefined){
+    if (res !== undefined) {
       this.resistration = res;
-    }else{
+    } else {
       throw new Error("Cadastro não encontrado: id = " + id);
     }
   }
 
-  update(): void{
-    if(this.formResistration.form.valid){
+  update(): void {
+    if (this.formResistration.form.valid) {
       this.resistrationService.update(this.resistration)
       this.router.navigate(['resistration']);
     }
   }
-  generateInput(){
+  generateInput() {
     this.generate = true
   }
 

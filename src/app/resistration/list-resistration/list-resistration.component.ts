@@ -11,7 +11,7 @@ export class ListResistrationComponent implements OnInit {
 
   resistrations: Resistration[] = []
 
-  constructor(private resistrationService: ResistrationService ) { }
+  constructor(private resistrationService: ResistrationService) { }
 
   ngOnInit(): void {
     this.resistrations = this.GetAll();
@@ -19,11 +19,11 @@ export class ListResistrationComponent implements OnInit {
 
   GetAll(): Resistration[] {
     return this.resistrationService.GetAll();
-   
+
   }
-  remove($event: any, resistration: Resistration): void{
+  remove($event: any, resistration: Resistration): void {
     $event.preventDefault();
-    if(confirm(`Deseja realmente remover o cadastro ${resistration.name}?`)){
+    if (confirm(`Deseja realmente remover o cadastro ${resistration.name}?`)) {
       this.resistrationService.remove(resistration.id!)
       this.resistrations = this.GetAll();
 

@@ -20,7 +20,7 @@ import { UpdateResistrationComponent } from './update-resistration/update-resist
     RouterModule,
     FormsModule
   ],
-  providers:[
+  providers: [
     ResistrationService
   ]
 })

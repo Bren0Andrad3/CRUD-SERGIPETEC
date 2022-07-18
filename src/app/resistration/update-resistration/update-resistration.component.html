@@ -1,13 +1,13 @@
-<h1>Editar Cadastro</h1>
+<br><br><br>
 
-<div class="well">
+<h1 class="container">Editar Cadastro</h1>
+
+<div class="container">
     <form #formResistration="ngForm">
         <div class="form-group">
             <label for="name">Nome:</label>
-            <input type="text" class="form-control" name="name" id="name"
-                    [(ngModel)]="resistration.name"
-                    #name="ngModel"
-                    minlength='2' required>
+            <input type="text" class="form-control" name="name" id="name" [(ngModel)]="resistration.name"
+                #name="ngModel" minlength='2' required>
             <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
                 <div [hidden]="!name.errors?.['required']">Digite seu nome</div>
                 <div [hidden]="!name.errors?.['minlength']">O nome deve conter ao menos 2 caracteres.</div>
@@ -15,41 +15,33 @@
         </div>
         <div class="form-group">
             <label for="email">Email:</label>
-            <input type="text" class="form-control" name="email" id="email"
-            [(ngModel)]="resistration.email"
-            #email="ngModel"
-            required>
+            <input type="text" class="form-control" name="email" id="email" [(ngModel)]="resistration.email"
+                #email="ngModel" required>
             <div *ngIf="email.errors && (email.dirty || email.touched)" class="alert alert-danger">
                 <div [hidden]="!email.errors?.['required']">Digite seu email</div>
             </div>
         </div>
         <div class="form-group">
             <label for="cpf">CPF:</label>
-            <input type="text" class="form-control" name="cpf" id="cpf"
-            [(ngModel)]="resistration.cpf"
-            #cpf="ngModel"
-             required>
+            <input type="text" class="form-control" name="cpf" id="cpf" [(ngModel)]="resistration.cpf" #cpf="ngModel"
+                required>
             <div *ngIf="cpf.errors && (cpf.dirty || cpf.touched)" class="alert alert-danger">
                 <div [hidden]="!cpf.errors?.['required']">Digite seu CPF</div>
             </div>
         </div>
         <div class="form-group">
             <label for="cellphone">Celular:</label>
-            <input type="text" class="form-control" name="cellphone" id="cellphone"
-            [(ngModel)]="resistration.cellphone"
-            #cellphone="ngModel"
-            required>
+            <input type="text" class="form-control" name="cellphone" id="cellphone" [(ngModel)]="resistration.cellphone"
+                #cellphone="ngModel" required>
             <div *ngIf="cellphone.errors && (cellphone.dirty || cellphone.touched)" class="alert alert-danger">
                 <div [hidden]="!cellphone.errors?.['required']">Digite o numero de seu celular</div>
             </div>
         </div>
         <div class="form-group">
             <label for="telephone">Telefone:</label>
-            <input type="text" class="form-control" name="telephone" id="telephone"
-            [(ngModel)]="resistration.telephone"
-            #telephone="ngModel"
-            required>
-            <div *ngIf="telephone.errors && (telephone.dirty || telephone.touched)"  class="alert alert-danger">
+            <input type="text" class="form-control" name="telephone" id="telephone" [(ngModel)]="resistration.telephone"
+                #telephone="ngModel" required>
+            <div *ngIf="telephone.errors && (telephone.dirty || telephone.touched)" class="alert alert-danger">
                 <div [hidden]="!telephone.errors?.['required']">Digite seu numero de telefone</div>
             </div>
         </div>
@@ -58,52 +50,37 @@
             <label for="address">Endereço:</label>
             <br><br>
             <label for="address.rua">Rua</label>
+            <input type="text" class="form-control" name="address" id="address" [(ngModel)]="resistration.address.rua"
+                #address="ngModel" required>
+            <label for="address.numero">Numero</label>
             <input type="text" class="form-control" name="address" id="address"
-            [(ngModel)]="resistration.address.rua"
-            #address="ngModel"
-             required>
-             <label for="address.numero">Numero</label>
-             <input type="text" class="form-control" name="address" id="address"
-             [(ngModel)]="resistration.address.numero"
-             #address="ngModel"
-              required>
-              <label for="address">Bairro</label>
-              <input type="text" class="form-control" name="address" id="address"
-              [(ngModel)]="resistration.address.bairro"
-              #address="ngModel"
-               required>
-               <label for="address">Cidade</label>
-               <input type="text" class="form-control" name="address" id="address"
-               [(ngModel)]="resistration.address.cidade"
-               #address="ngModel"
-                required>
-                <label for="address">Cep</label>
-                <input type="text" class="form-control" name="address" id="address"
-                [(ngModel)]="resistration.address.cep"
-                #address="ngModel"
-                 required>
-                 <label for="address">Estado</label>
-                 <input type="text" class="form-control" name="address" id="address"
-                 [(ngModel)]="resistration.address.estado"
-                 #address="ngModel"
-                  required>
-                  <label for="address">País</label>
-                 <input type="text" class="form-control" name="address" id="address"
-                 [(ngModel)]="resistration.address.pais"
-                 #address="ngModel"
-                  required>
+                [(ngModel)]="resistration.address.numero" #address="ngModel" required>
+            <label for="address">Bairro</label>
+            <input type="text" class="form-control" name="address" id="address"
+                [(ngModel)]="resistration.address.bairro" #address="ngModel" required>
+            <label for="address">Cidade</label>
+            <input type="text" class="form-control" name="address" id="address"
+                [(ngModel)]="resistration.address.cidade" #address="ngModel" required>
+            <label for="address">Cep</label>
+            <input type="text" class="form-control" name="address" id="address" [(ngModel)]="resistration.address.cep"
+                #address="ngModel" required>
+            <label for="address">Estado</label>
+            <input type="text" class="form-control" name="address" id="address"
+                [(ngModel)]="resistration.address.estado" #address="ngModel" required>
+            <label for="address">País</label>
+            <input type="text" class="form-control" name="address" id="address" [(ngModel)]="resistration.address.pais"
+                #address="ngModel" required>
             <div *ngIf="address.errors && (address.dirty || address.touched)" class="alert alert-danger">
-                <div [hidden]="!address.errors?.['required']" >Digite seu endereço</div>
+                <div [hidden]="!address.errors?.['required']">Digite seu endereço</div>
             </div>
-           
+
 
 
         </div>
         <br>
-        <div (click)="generateInput()" align="right"> 
+        <div (click)="generateInput()" align="right">
             <th class="text-center">
-                <a  title="+" alt = "+"
-                    class="btn btn-xs btn-success">
+                <a title="+" alt="+" class="btn btn-xs btn-success">
                     <i class="fa fa-plus" aria-hidden="true"></i>
                 </a>
             </th>
@@ -113,52 +90,36 @@
             <label for="address">Segundo endereço:</label>
             <br><br>
             <label for="address.rua">Rua</label>
+            <input type="text" class="form-control" name="address" id="address" [(ngModel)]="resistration.address2.rua"
+                #address="ngModel" required>
+            <label for="address.numero">Numero</label>
             <input type="text" class="form-control" name="address" id="address"
-            [(ngModel)]="resistration.address2.rua"
-            #address="ngModel"
-             required>
-             <label for="address.numero">Numero</label>
-             <input type="text" class="form-control" name="address" id="address"
-             [(ngModel)]="resistration.address2.numero"
-             #address="ngModel"
-              required>
-              <label for="address">Bairro</label>
-              <input type="text" class="form-control" name="address" id="address"
-              [(ngModel)]="resistration.address2.bairro"
-              #address="ngModel"
-               required>
-               <label for="address">Cidade</label>
-               <input type="text" class="form-control" name="address" id="address"
-               [(ngModel)]="resistration.address2.cidade"
-               #address="ngModel"
-                required>
-                <label for="address">Cep</label>
-                <input type="text" class="form-control" name="address" id="address"
-                [(ngModel)]="resistration.address2.cep"
-                #address="ngModel"
-                 required>
-                 <label for="address">Estado</label>
-                 <input type="text" class="form-control" name="address" id="address"
-                 [(ngModel)]="resistration.address2.estado"
-                 #address="ngModel"
-                  required>
-                  <label for="address">País</label>
-                 <input type="text" class="form-control" name="address" id="address"
-                 [(ngModel)]="resistration.address2.pais"
-                 #address="ngModel"
-                  required>
+                [(ngModel)]="resistration.address2.numero" #address="ngModel" required>
+            <label for="address">Bairro</label>
+            <input type="text" class="form-control" name="address" id="address"
+                [(ngModel)]="resistration.address2.bairro" #address="ngModel" required>
+            <label for="address">Cidade</label>
+            <input type="text" class="form-control" name="address" id="address"
+                [(ngModel)]="resistration.address2.cidade" #address="ngModel" required>
+            <label for="address">Cep</label>
+            <input type="text" class="form-control" name="address" id="address" [(ngModel)]="resistration.address2.cep"
+                #address="ngModel" required>
+            <label for="address">Estado</label>
+            <input type="text" class="form-control" name="address" id="address"
+                [(ngModel)]="resistration.address2.estado" #address="ngModel" required>
+            <label for="address">País</label>
+            <input type="text" class="form-control" name="address" id="address" [(ngModel)]="resistration.address2.pais"
+                #address="ngModel" required>
             <div *ngIf="address.errors && (address.dirty || address.touched)" class="alert alert-danger">
-                <div [hidden]="!address.errors?.['required']" >Digite seu endereço</div>
+                <div [hidden]="!address.errors?.['required']">Digite seu endereço</div>
             </div>
-             
+
         </div>
         <br>
-        
+
         <div class="form-group">
-            <button type="buttom" class="btn btn-primary" 
-            (click)="update()"
-            [disabled]="!formResistration.form.valid">
-                    
+            <button type="buttom" class="btn btn-primary" (click)="update()" [disabled]="!formResistration.form.valid">
+
                 <i class="fa fa-save" aria-hidden="true"></i> Salvar
             </button>
             <a class="btn btn-secondary" [routerLink]="['/resistration']">
@@ -168,3 +129,4 @@
 
     </form>
 </div>
+<br>
