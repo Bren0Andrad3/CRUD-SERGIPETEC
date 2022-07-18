@@ -1,3 +1,14 @@
+# SERGIPETEC TESTE
+
+Olá 👋, esse projeto foi desenvolvido para uma vaga de estágio na Avonale - Desenvolvimento de uma API REST para compra de produtos.
+
+Um CRUD básico, onde é possivel listar,cadastrar,editar e deletar pessoas.
+
+Coclusão: O período de teste foi muito proveitoso, apesar de não ter conseguido implementar tudo, estou feliz pela realização do teste, pelo meu tempo ser muito apertado, estou disposto a aprender e me comprometer com a empresa, estou buscando experiência na área e acredito que possa ser uma relação mútua.
+
+Tecnologia usada Angular, Json-server e Bootstrap Utilizei a ferramenta do git para tranformar meu código em um repositório de forma automática ✌
+
+
 # Cadastro
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.5.
