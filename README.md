@@ -8,6 +8,7 @@ Coclusão: O período de teste foi muito proveitoso, pelo meu tempo ser muito ap
 
 Depêndencias usada AngularCLI, Bootstrap, Utilizei a ferramenta do git para tranformar meu código em um repositório de forma automática ✌
 
+![image](https://user-images.githubusercontent.com/102314911/179863042-64779142-755b-4f0b-8771-dafe2cefef86.png)
 
 # Cadastro
 
