@@ -1,6 +1,6 @@
 # SERGIPETEC TESTE
 
-Olá 👋, esse projeto foi desenvolvido para uma vaga de estágio na Avonale - Desenvolvimento de uma API REST para compra de produtos.
+Olá 👋, esse projeto foi desenvolvido para uma vaga SergipeTec - Desenvolvimento de um CRUD para cadastar pessoas.
 
 Um CRUD básico, onde é possivel listar,cadastrar,editar e deletar pessoas.
 
