@@ -2,7 +2,7 @@
 
 Olá 👋, esse projeto foi desenvolvido para uma vaga SergipeTec - Desenvolvimento de um CRUD para cadastar pessoas.
 
-Um CRUD básico, onde é possivel listar,cadastrar,editar e deletar pessoas.
+Um CRUD básico, onde é possivel listar,cadastrar,editar e deletar pessoas, implementação de testes de validação
 
 Coclusão: O período de teste foi muito proveitoso, pelo meu tempo ser muito apertado não conseguir implementar tudo, estou feliz pela realização do teste, disposto a aprender e me comprometer com a empresa, buscando experiência na área e acredito que possa ser uma relação mútua.
 
